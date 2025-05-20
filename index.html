@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selecione o Servidor</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #1f1f1f;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #00ffcc;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
+      background-color: #1a1a1a;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      padding: 12px 20px;
+      background-color: #00ffcc;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #00ccb3;
+    }
+
+    iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Selecione um Servidor</h1>
+  </header>
+
+  <div class="buttons">
+    <button onclick="carregar('https://mix.voolix.fun/')">Servidor 1</button>
+    <button onclick="carregar('https://app.voolix.fun/inicio')">Servidor 2</button>
+  </div>
+
+  <iframe id="iframe" src=""></iframe>
+
+  <script>
+    function carregar(url) {
+      document.getElementById('iframe').src = url;
+    }
+  </script>
+</body>
+</html>
